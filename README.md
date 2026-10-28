@@ -1,47 +1,117 @@
-# Lionel’s portfolio
+# Lionel Chapasuka — Portfolio
 
-The first chapter: a React landing page reconstructed from the supplied desired landing-page reference and original pixel-art assets.
+> An interactive pixel-art portfolio, built one chapter at a time.
 
-## Run locally
+I'm a Computer Science student at the **University of the People** and a developer at **LJ Tutors**. I build web applications, developer tooling, and small products that solve problems I actually run into — usually with JavaScript, React, and a growing amount of Python.
 
-Paste this one line into PowerShell from any folder:
+This repository is my main portfolio: a hand-built personal site that grows into a small explorable world. It is not a template. Every animation layer, interaction, and asset pipeline in here was written for this project.
 
-```powershell
-npm.cmd --prefix E:\portfolio install; if ($LASTEXITCODE -eq 0) { npm.cmd --prefix E:\portfolio run dev -- --open }
+---
+
+## The idea
+
+Most portfolios are a scroll and a grid of cards. This one treats the site as a place you arrive at: a pixel-art landscape with a character, a companion, a wooden sign, and a horizon that changes between day and night.
+
+The landing page is **Chapter One**. Later chapters turn the scene into a navigable world where projects, writing, and background are found rather than listed. The site is deliberately chapter-based so it can keep growing without being redesigned each time something new is added.
+
+---
+
+## What the landing page does
+
+- **Responsive hero scene** — character, dog, wooden sign, and a full waterfall panorama that scales with the viewport instead of being stretched or letterboxed.
+- **Day / night toggle** — re-lights the whole scene from the same artwork.
+- **Staged entrance sequence** — "Hi" → "I'm Lionel" → role → introduction → actions, eased in over roughly four seconds. Shown instantly when reduced motion is requested.
+- **Atmosphere layers** — individually extracted falling leaves on staggered cycles and a bird flock crossing the sky, both frozen by the same pause control.
+- **Keyboard navigation** and a visible pause control for every motion layer.
+- **Accessible by default** — the wooden sign's text is real HTML rather than baked into an image, and placeholder dialogs are announced properly to screen readers.
+- **Honest coming-soon destinations** — the world map, remaining chapters, and CV open clear placeholders instead of dead links.
+
+---
+
+## Selected work
+
+Public projects, most with live demos.
+
+### Featured
+
+| Project | What it does | Live |
+|---|---|---|
+| **[latex-to-word](https://github.com/Lionelapex/latex-to-word)** | Converts ChatGPT and LaTeX output into Word documents with equations that stay editable instead of becoming images. | [Demo](https://lionelapex.github.io/latex-to-word/) |
+| **[Retro Pokédex](https://github.com/Lionelapex/Retro-Pok-dex)** | A pixel-art Pokédex: search Pokémon, compare stats side by side, and toggle normal and shiny variants. | [Demo](https://lionelapex.github.io/Retro-Pok-dex/) |
+| **[Realtime Voice Receptionist](https://github.com/Lionelapex/realtime-voice-receptionist)** | A browser-based voice agent that holds a receptionist conversation in real time. | [Demo](https://realtime-voice-receptionist.onrender.com) |
+| **[Taste Haven](https://github.com/Lionelapex/Taste-haven-website)** | A responsive restaurant site covering menu, services, and online ordering. | [Demo](https://lionelapex.github.io/Taste-haven-website/) |
+
+### Web applications
+
+- **[Personal Finance Tracker](https://github.com/Lionelapex/Personal-Finance-Tracker)** — track income and spending with balances and category breakdowns. · [Demo](https://lionelapex.github.io/Personal-Finance-Tracker/)
+- **[Email Notification](https://github.com/Lionelapex/EMAIL-NOTIFICATION)** — a scheduled notification flow built around email delivery.
+- **[Rock Paper Crossblades](https://github.com/Lionelapex/Rock-paper-crossblades)** — a themed take on rock-paper-scissors from The Odin Project. · [Demo](https://lionelapex.github.io/Rock-paper-crossblades/)
+
+### Experiments and learning builds
+
+- **[Calculator](https://github.com/Lionelapex/calculator)** — a deliberately over-designed calculator built to test DOM handling and CSS-in-JS styling. · [Demo](https://lionelapex.github.io/calculator/)
+- **[ToBinaryConvertor](https://github.com/Lionelapex/ToBinaryConvertor)** — decimal-to-binary conversion with a no-framework interface. · [Demo](https://lionelapex.github.io/ToBinaryConvertor/)
+- **[Etch-to-Sketch](https://github.com/Lionelapex/Etch-to-sketch)** — grid-based drawing built to practise event handling.
+- **[Interactive Card Component](https://github.com/Lionelapex/Interactive-card-component)** — a component exercise focused on layout and state.
+- **[Web Development Resources](https://github.com/Lionelapex/web-development-resources)** — a curated list I keep for people starting out.
+
+Some client and commercial work lives in private repositories. I'm happy to walk through it on request.
+
+---
+
+## Built with
+
+- **React 19** for the component structure — scene layers, atmosphere, and controls are separate and independently pausable.
+- **Vite 7** for development and production builds.
+- **Tailwind CSS 4** through `@tailwindcss/vite`, imported without Preflight so the project's own reset and hand-tuned spacing survive alongside the utilities.
+- **Plain CSS** for the scene itself: the panorama, overlays, and character anchors sit in the artwork's native coordinates and scale with the viewport, which is simpler to reason about than utility classes for this kind of positioning.
+- **Python and Pillow** for asset preparation — cropping ambient layers to their union bounds, extracting the blank sign through a silhouette mask, and aligning the waterfall strips onto the rock face before the atlas is cut.
+
+---
+
+## Repository structure
+
+```
+index.html                  Entry document
+vite.config.js              Vite and Tailwind plugin configuration
+src/
+  main.jsx                  Application entry
+  App.jsx                   Landing scene composition
+  Atmosphere.jsx            Leaves, birds, and motion controls
+  Companions.jsx            Character, dog, and sign interactions
+  styles.css                Scene layout, animation, and responsive rules
+  tailwind.css              Theme and utility layers, without Preflight
+public/
+  assets/                   Prepared web assets: panorama, overlays,
+                            companions, sign, fonts, and atlas metadata
+scripts/
+  prepare_assets.py         Landscape, overlay, and sign pipeline
+  prepare_companions.py     Companion atlas extraction
+  requirements-assets.txt   Asset pipeline dependencies
 ```
 
-This installs dependencies and opens the app in your browser. Keep the terminal open; press Ctrl+C to stop. See [START-HERE.md](START-HERE.md) for details. From the project folder, `npm run build` produces `dist/`; `npm run preview` serves that build locally.
+The artwork in `public/assets` is generated from the original pixel-art packs by the scripts above. Those source packs stay local and are intentionally excluded from this repository; the shipped web copies are what the site loads.
 
-## Included
+---
 
-- Responsive introduction, brand, navigation, character and dog, and clickable wooden sign.
-- Static original character-and-dog artwork and a smaller wooden sign; an aligned waterfall animation, gently falling leaves, and birds crossing the sky. No animated flags.
-- Day/night toggle, animation pause control, keyboard navigation, and reduced-motion support.
-- A slower entrance sequence: “Hi” appears first, then “I’m Lionel,” followed by the introduction and buttons over about four seconds. Reduced-motion mode shows all content immediately.
-- Clear coming-soon dialogs for the world, remaining portfolio chapters, and CV. No CV or personal contact details were supplied.
+## Roadmap
 
-The world map, movement/collision system, and other pages are intentionally outside this first landing-page implementation.
+- [x] Chapter One — landing scene, atmosphere, controls, accessibility
+- [ ] The world map — an explorable scene linking each section
+- [ ] Movement and collision — walk the character through the world
+- [ ] Portfolio chapters — projects, writing, and background as places
+- [ ] CV chapter — download and in-page view
 
-## Assets
+---
 
-Original packs and ZIPs are preserved. `scripts/prepare_assets.py` creates landscape and environment web copies in `public/assets` using Pillow. It crops ambient layers to their union bounds and extracts the blank sign with a silhouette mask because its source has a baked checkerboard. The sign’s text is accessible HTML.
+## Credits
 
-The active character asset is `public/assets/companions-idle.webp`, generated from the original resting pose in `landing_character_dog_idle_wave_pack` by `scripts/prepare_assets.py`. Python is not needed to launch or build the app.
+The pixel-art world, character, companion, and sign are original assets made for this project. Interface fonts are **Outfit** and **Press Start 2P**, both distributed under the SIL Open Font License — license files ship in `public/assets`.
 
-Lionel, the dog, and the sign remain static. There is no wave timer, frame playback, or sign hover movement. Clicking the companions still shows the hello message. The smaller sign sits farther to the right to reveal both waterfalls on desktop.
+---
 
-The scene follows the viewport height without a fixed desktop/mobile minimum. The sign uses one bottom anchor across every breakpoint, with its post cropped just below the edge so it cannot float above the bottom. The smaller hero sits higher and slightly left on regular screens; compact height layouts preserve space around the character, with tighter typography and spacing on small phones.
+## Elsewhere
 
-The desktop hero has an additional 18-pixel upward adjustment and 10-pixel rightward offset to keep its actions above the character's head. Navigation gently fades in over 800 milliseconds. “Hi” begins at 180 milliseconds, “I’m Lionel” at one second, the role at 1.75 seconds, the paragraph at 2.15 seconds, and the buttons at 2.55 seconds. Each text stage eases in over roughly a second with a six-pixel rise. These entrances run once per page load, use opacity/transform only, and leave the character, dog, and sign static. Theme changes do not replay the entrance.
+- GitHub — [@Lionelapex](https://github.com/Lionelapex)
 
-Tailwind CSS is integrated through `@tailwindcss/vite` in `vite.config.js`. `src/tailwind.css` imports the theme and utility layers without Preflight, preserving the existing custom reset, fonts, spacing, and artwork. Layout utilities are used in the React markup alongside the original stylesheet; custom animation utilities and `motion-safe:` variants handle the slower entrance timing. Continue using the same npm launch command.
-
-The original waterfall highlights were offset onto the rock face. `align_waterfalls` in `scripts/prepare_assets.py` repositions the left and right strips independently in the background's native 2166 × 726 coordinates and masks them to the water and splash areas before atlas cropping. The background and overlays share one responsive landscape container, preserving their alignment as the scene scales.
-
-The alternative sheet and its extracted atlases remain preserved in `source-assets` and `public/assets/companions` for future use. The waterfall retains its 2166 × 726 background coordinates. On narrow screens the background is cropped, never stretched; foreground characters and sign have independent layouts.
-
-Leaves use individual sprites extracted from the supplied overlays. Each follows a continuous downward path with gentle sideways sway, exits below the landing viewport, and waits offscreen before restarting. Staggered 28–34-second cycles keep the motion sparse. Birds use the supplied wing poses with continuous horizontal flight at a fixed altitude, crossing right to left over 20.4 seconds and waiting 9.6 seconds offscreen. Their starts are staggered into a small flock.
-
-The atmosphere spans the actual landing viewport using container-relative width/height units, independently of the panorama's responsive crop. This keeps exits outside the visible desktop, tablet, and phone edges. The pause control freezes travel, sway, and wing motion together. Reduced-motion mode hides these moving particles. The waving flag overlay is no longer generated or rendered; flags painted into the landscape remain static.
-
-Fonts: Outfit and Press Start 2P, distributed under the SIL Open Font License; see `public/assets/*-OFL.txt`.
+<sub>Built and maintained by Lionel Chapasuka.</sub>
