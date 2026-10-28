@@ -5,7 +5,7 @@ import './styles.css';
 import Companions from './Companions';
 import Atmosphere from './Atmosphere';
 
-const ASSETS = '/assets/';
+const ASSETS = `${import.meta.env.BASE_URL}assets/`;
 const chapters = ['Home', 'About', 'Projects', 'Skills', 'Experience', 'Blog', 'CV', 'Contact'];
 const chapterCopy = {
   About: 'The story behind the developer. This chapter is coming next.',

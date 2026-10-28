@@ -11,7 +11,7 @@ const leaves = [
 export default function Atmosphere() {
   return <div className="atmosphere" aria-hidden="true">
     {leaves.map((leaf, index) => <div key={`leaf-${index}`} className="leaf-fall" style={{ left: leaf.left, '--drift': leaf.drift, '--cycle': leaf.cycle, '--delay': leaf.delay, '--leaf-size': leaf.size, '--sway': leaf.sway }}>
-      <img className="leaf-sway" src={`/assets/leaf-${leaf.sprite}.webp`} alt="" draggable="false" />
+      <img className="leaf-sway" src={`${import.meta.env.BASE_URL}assets/leaf-${leaf.sprite}.webp`} alt="" draggable="false" />
     </div>)}
     {[{ top: '17%', delay: '5s' }, { top: '21%', delay: '6.2s' }, { top: '18.5%', delay: '7.1s' }].map((bird, index) => <div key={`bird-${index}`} className="bird-flight" style={{ top: bird.top, '--delay': bird.delay }}>
       <span className="bird-wings" />
