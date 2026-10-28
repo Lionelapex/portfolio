@@ -1,75 +1,53 @@
-# Lionel Chapasuka — Portfolio
+# Lionel Chapasuka
 
-> An interactive pixel-art portfolio, built one chapter at a time.
+I study Computer Science at the University of the People and work as a developer at LJ Tutors. This repository is my personal site, and it is also where I keep the projects I have built outside coursework. Most of them started as small irritations in my own workflow that I wanted to fix: a converter that kept breaking my equations, a finance tracker I could not find in a form I liked, a voice agent I wanted to understand from the inside.
 
-I'm a Computer Science student at the **University of the People** and a developer at **LJ Tutors**. I build web applications, developer tooling, and small products that solve problems I actually run into — usually with JavaScript, React, and a growing amount of Python.
+The site is built in chapters rather than pages. Chapter one is the landing scene: a pixel art landscape with a character, a dog, a wooden sign, and a waterfall that runs across the width of the screen. Later chapters turn the same scene into somewhere you can walk, so the projects, notes, and background end up as places in a world instead of a long scroll of cards.
 
-This repository is my main portfolio: a hand-built personal site that grows into a small explorable world. It is not a template. Every animation layer, interaction, and asset pipeline in here was written for this project.
+## What is finished so far
 
----
+The landing page works and is what you see today. The panorama crops to the viewport instead of stretching, so it stays sharp on a phone and on a wide monitor while the character, dog, and sign keep their own placement. A toggle switches the scene between day and night by relighting the same artwork.
 
-## The idea
+The introduction arrives in stages: a greeting first, then my name, then the role, the paragraph, and the buttons, spread across roughly four seconds. If your system asks for reduced motion, all of it appears at once. Leaves fall on staggered cycles and a small flock of birds crosses the sky. The pause control stops both of them along with the rest of the motion on the page.
 
-Most portfolios are a scroll and a grid of cards. This one treats the site as a place you arrive at: a pixel-art landscape with a character, a companion, a wooden sign, and a horizon that changes between day and night.
+The wooden sign carries real text instead of lettering painted into the image, so screen readers can read it. Sections that are not built yet open a short explanation rather than a dead link.
 
-The landing page is **Chapter One**. Later chapters turn the scene into a navigable world where projects, writing, and background are found rather than listed. The site is deliberately chapter-based so it can keep growing without being redesigned each time something new is added.
+## Projects
 
----
+The list below is the public work. Live links are included where the deployment is still running.
 
-## What the landing page does
+### Featured projects
 
-- **Responsive hero scene** — character, dog, wooden sign, and a full waterfall panorama that scales with the viewport instead of being stretched or letterboxed.
-- **Day / night toggle** — re-lights the whole scene from the same artwork.
-- **Staged entrance sequence** — "Hi" → "I'm Lionel" → role → introduction → actions, eased in over roughly four seconds. Shown instantly when reduced motion is requested.
-- **Atmosphere layers** — individually extracted falling leaves on staggered cycles and a bird flock crossing the sky, both frozen by the same pause control.
-- **Keyboard navigation** and a visible pause control for every motion layer.
-- **Accessible by default** — the wooden sign's text is real HTML rather than baked into an image, and placeholder dialogs are announced properly to screen readers.
-- **Honest coming-soon destinations** — the world map, remaining chapters, and CV open clear placeholders instead of dead links.
-
----
-
-## Selected work
-
-Public projects, most with live demos.
-
-### Featured
-
-| Project | What it does | Live |
-|---|---|---|
-| **[latex-to-word](https://github.com/Lionelapex/latex-to-word)** | Converts ChatGPT and LaTeX output into Word documents with equations that stay editable instead of becoming images. | — |
-| **[Retro Pokédex](https://github.com/Lionelapex/Retro-Pok-dex)** | A pixel-art Pokédex: search Pokémon, compare stats side by side, and toggle normal and shiny variants. | [Demo](https://lionelapex.github.io/Retro-Pok-dex/) |
-| **[Realtime Voice Receptionist](https://github.com/Lionelapex/realtime-voice-receptionist)** | A browser-based voice agent that holds a receptionist conversation in real time. | — |
-| **[Taste Haven](https://github.com/Lionelapex/Taste-haven-website)** | A responsive restaurant site covering menu, services, and online ordering. | [Demo](https://lionelapex.github.io/Taste-haven-website/) |
+- [latex-to-word](https://github.com/Lionelapex/latex-to-word) converts ChatGPT and LaTeX output into Word documents and keeps the equations editable instead of flattening them into pictures.
+- [Retro Pokédex](https://github.com/Lionelapex/Retro-Pok-dex) is a pixel art Pokédex where you can search for a Pokémon, compare two sets of stats side by side, and switch between the normal and shiny sprites. There is a [live demo](https://lionelapex.github.io/Retro-Pok-dex/).
+- [Realtime Voice Receptionist](https://github.com/Lionelapex/realtime-voice-receptionist) is a browser voice agent that holds a receptionist style conversation in real time.
+- [Taste Haven](https://github.com/Lionelapex/Taste-haven-website) is a restaurant site with the menu, services, and online ordering laid out for phones and desktops. There is a [live demo](https://lionelapex.github.io/Taste-haven-website/).
 
 ### Web applications
 
-- **[Personal Finance Tracker](https://github.com/Lionelapex/Personal-Finance-Tracker)** — track income and spending with balances and category breakdowns. · [Demo](https://lionelapex.github.io/Personal-Finance-Tracker/)
-- **[Email Notification](https://github.com/Lionelapex/EMAIL-NOTIFICATION)** — a scheduled notification flow built around email delivery.
-- **[Rock Paper Crossblades](https://github.com/Lionelapex/Rock-paper-crossblades)** — a themed take on rock-paper-scissors from The Odin Project. · [Demo](https://lionelapex.github.io/Rock-paper-crossblades/)
+- [Personal Finance Tracker](https://github.com/Lionelapex/Personal-Finance-Tracker) records income and spending and breaks the totals down by category. There is a [live demo](https://lionelapex.github.io/Personal-Finance-Tracker/).
+- [Email Notification](https://github.com/Lionelapex/EMAIL-NOTIFICATION) is a scheduled notification flow built around email delivery.
+- [Rock Paper Crossblades](https://github.com/Lionelapex/Rock-paper-crossblades) is a themed take on rock paper scissors from The Odin Project. There is a [live demo](https://lionelapex.github.io/Rock-paper-crossblades/).
 
-### Experiments and learning builds
+### Smaller builds
 
-- **[Calculator](https://github.com/Lionelapex/calculator)** — a deliberately over-designed calculator built to test DOM handling and CSS-in-JS styling. · [Demo](https://lionelapex.github.io/calculator/)
-- **[ToBinaryConvertor](https://github.com/Lionelapex/ToBinaryConvertor)** — decimal-to-binary conversion with a no-framework interface. · [Demo](https://lionelapex.github.io/ToBinaryConvertor/)
-- **[Etch-to-Sketch](https://github.com/Lionelapex/Etch-to-sketch)** — grid-based drawing built to practise event handling.
-- **[Interactive Card Component](https://github.com/Lionelapex/Interactive-card-component)** — a component exercise focused on layout and state.
-- **[Web Development Resources](https://github.com/Lionelapex/web-development-resources)** — a curated list I keep for people starting out.
+- [Calculator](https://github.com/Lionelapex/calculator) was an excuse to practise DOM work and styling, so the design is louder than it needs to be. There is a [live demo](https://lionelapex.github.io/calculator/).
+- [ToBinaryConvertor](https://github.com/Lionelapex/ToBinaryConvertor) turns decimal numbers into binary without a framework. There is a [live demo](https://lionelapex.github.io/ToBinaryConvertor/).
+- [Etch-to-Sketch](https://github.com/Lionelapex/Etch-to-sketch) is a drawing grid I built while learning event handling.
+- [Interactive Card Component](https://github.com/Lionelapex/Interactive-card-component) is a layout and state exercise.
+- [Web Development Resources](https://github.com/Lionelapex/web-development-resources) collects the links I end up sending to people who are starting out.
 
-Some client and commercial work lives in private repositories. I'm happy to walk through it on request.
+Some client and commercial work sits in private repositories, and I can walk through it on request.
 
----
+## How the site is put together
 
-## Built with
+The interface is React 19 on Vite 7. Tailwind 4 is loaded through `@tailwindcss/vite` without Preflight, so the site keeps its own reset and spacing while I still get the utilities in markup.
 
-- **React 19** for the component structure — scene layers, atmosphere, and controls are separate and independently pausable.
-- **Vite 7** for development and production builds.
-- **Tailwind CSS 4** through `@tailwindcss/vite`, imported without Preflight so the project's own reset and hand-tuned spacing survive alongside the utilities.
-- **Plain CSS** for the scene itself: the panorama, overlays, and character anchors sit in the artwork's native coordinates and scale with the viewport, which is simpler to reason about than utility classes for this kind of positioning.
-- **Python and Pillow** for asset preparation — cropping ambient layers to their union bounds, extracting the blank sign through a silhouette mask, and aligning the waterfall strips onto the rock face before the atlas is cut.
+The scene itself is plain CSS. The panorama, overlays, and character anchors are positioned in the artwork's own coordinates, 2166 by 726 for the background, and then scaled with the viewport. That is easier to reason about than a pile of utility classes once several layers have to line up.
 
----
+Assets are prepared with Python and Pillow. The script crops the ambient layers to their combined bounds, pulls the blank sign out through a silhouette mask because the source image has a checkerboard baked into it, and realigns the waterfall strips onto the rock face before it cuts the atlas.
 
-## Repository structure
+## Repository layout
 
 ```
 index.html                  Entry document
@@ -90,28 +68,22 @@ scripts/
   requirements-assets.txt   Asset pipeline dependencies
 ```
 
-The artwork in `public/assets` is generated from the original pixel-art packs by the scripts above. Those source packs stay local and are intentionally excluded from this repository; the shipped web copies are what the site loads.
+The files in `public/assets` are generated from the original pixel art packs by the scripts in `scripts/`. Those packs stay on my machine and are excluded from the repository, so the site loads the prepared copies instead of the sources.
 
----
+## What comes next
 
-## Roadmap
-
-- [x] Chapter One — landing scene, atmosphere, controls, accessibility
-- [ ] The world map — an explorable scene linking each section
-- [ ] Movement and collision — walk the character through the world
-- [ ] Portfolio chapters — projects, writing, and background as places
-- [ ] CV chapter — download and in-page view
-
----
+- [x] Chapter one: landing scene, atmosphere, controls, and accessibility
+- [ ] The world map, which will link the sections together
+- [ ] Movement and collision so the character can walk the map
+- [ ] The portfolio chapters, with projects and background as places
+- [ ] A CV chapter you can read in the page or download
 
 ## Credits
 
-The pixel-art world, character, companion, and sign are original assets made for this project. Interface fonts are **Outfit** and **Press Start 2P**, both distributed under the SIL Open Font License — license files ship in `public/assets`.
-
----
+The world, character, dog, and sign are original artwork made for this project. The interface uses Outfit and Press Start 2P, both under the SIL Open Font License, and the licence files ship alongside the fonts in `public/assets`.
 
 ## Elsewhere
 
-- GitHub — [@Lionelapex](https://github.com/Lionelapex)
+You can find the rest of my work on [GitHub](https://github.com/Lionelapex).
 
-<sub>Built and maintained by Lionel Chapasuka.</sub>
+<sub>Maintained by Lionel Chapasuka.</sub>
