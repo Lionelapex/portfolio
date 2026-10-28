@@ -36,9 +36,9 @@ Public projects, most with live demos.
 
 | Project | What it does | Live |
 |---|---|---|
-| **[latex-to-word](https://github.com/Lionelapex/latex-to-word)** | Converts ChatGPT and LaTeX output into Word documents with equations that stay editable instead of becoming images. | [Demo](https://lionelapex.github.io/latex-to-word/) |
+| **[latex-to-word](https://github.com/Lionelapex/latex-to-word)** | Converts ChatGPT and LaTeX output into Word documents with equations that stay editable instead of becoming images. | — |
 | **[Retro Pokédex](https://github.com/Lionelapex/Retro-Pok-dex)** | A pixel-art Pokédex: search Pokémon, compare stats side by side, and toggle normal and shiny variants. | [Demo](https://lionelapex.github.io/Retro-Pok-dex/) |
-| **[Realtime Voice Receptionist](https://github.com/Lionelapex/realtime-voice-receptionist)** | A browser-based voice agent that holds a receptionist conversation in real time. | [Demo](https://realtime-voice-receptionist.onrender.com) |
+| **[Realtime Voice Receptionist](https://github.com/Lionelapex/realtime-voice-receptionist)** | A browser-based voice agent that holds a receptionist conversation in real time. | — |
 | **[Taste Haven](https://github.com/Lionelapex/Taste-haven-website)** | A responsive restaurant site covering menu, services, and online ordering. | [Demo](https://lionelapex.github.io/Taste-haven-website/) |
 
 ### Web applications
