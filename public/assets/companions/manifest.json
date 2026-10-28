@@ -1,0 +1,22 @@
+{
+  "character-idle": {
+    "frames": 13,
+    "width": 116,
+    "height": 194
+  },
+  "character-wave": {
+    "frames": 17,
+    "width": 116,
+    "height": 194
+  },
+  "dog-idle": {
+    "frames": 12,
+    "width": 112,
+    "height": 124
+  },
+  "dog-happy": {
+    "frames": 16,
+    "width": 112,
+    "height": 124
+  }
+}

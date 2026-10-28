@@ -1,0 +1,28 @@
+# Dependencies & build output
+node_modules/
+dist/
+.vite/
+*.local
+artifacts/
+
+# Original asset archives (kept locally, not part of the site source)
+*.zip
+
+# Unzipped source asset packs (originals — the prepared web copies live in public/assets)
+desired_landing_page_reference_pack/
+dog_idle_animation_pack/
+explore_my_world_sign_sprite_pack/
+landing_background_pack/
+landing_character_dog_idle_wave_pack/
+landing_environment_animations/
+landing_precise_overlay_animations/
+lionel_landing_page_avatar_assets/
+lionel_sprite_pack/
+pixel_art_village_tileset_12px_transparent/
+pixel_portfolio_separate_mockups (1)/
+source-assets/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
