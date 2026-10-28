@@ -2,6 +2,8 @@
 
 I study Computer Science at the University of the People and work as a developer at LJ Tutors. This repository is my personal site, and it is also where I keep the projects I have built outside coursework. Most of them started as small irritations in my own workflow that I wanted to fix: a converter that kept breaking my equations, a finance tracker I could not find in a form I liked, a voice agent I wanted to understand from the inside.
 
+The site is live at [lionelapex.github.io/portfolio](https://lionelapex.github.io/portfolio/).
+
 The site is built in chapters rather than pages. Chapter one is the landing scene: a pixel art landscape with a character, a dog, a wooden sign, and a waterfall that runs across the width of the screen. Later chapters turn the same scene into somewhere you can walk, so the projects, notes, and background end up as places in a world instead of a long scroll of cards.
 
 ## What is finished so far
